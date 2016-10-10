@@ -38,16 +38,5 @@ public class Main {
         checkout.processItemsInCart();
         Receipt receipt = checkout.getReceipt();
         checkout.printReceipt(receipt);
-
-
-        /*Item item1 = new OtherItem("imported bottle of perfume", 27.99f, 1, true);
-        Item item2 = new OtherItem("bottle of perfume", 18.99f, 1, false);
-        Item item3 = new MedicalItem("packet of headache pills", 9.75f, 1, false);
-        Item item4 = new FoodItem("box of imported chocolates", 11.25f, 1, true);
-
-        itemlist.add(item1);
-        itemlist.add(item2);
-        itemlist.add(item3);
-        itemlist.add(item4);*/
     }
 }
