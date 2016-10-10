@@ -19,7 +19,6 @@ import java.util.List;
 public class Main {
 
     public static void main(String [] args) throws IOException {
-
         List<Item> itemlist = new ArrayList<Item>();
 
         File inputFile = new File(args[0]);

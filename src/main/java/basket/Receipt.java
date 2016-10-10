@@ -33,7 +33,7 @@ public class Receipt implements ReceiptInterface {
 
         for(Item item: itemList)
         {
-            receipt += item.getQuantity() + " " + item.getDescription() + ": " + item.getTaxedPrice() + "\n";
+            receipt += item.getQuantity() + " " + item.getDescription() + ": " + String.format(Locale.US,"%.02f", item.getTaxedPrice()) + "\n";
         }
 
         receipt += "Total sales tax: " + String.format(Locale.US,"%.02f", getTotalSalesTax()) + "\n";
