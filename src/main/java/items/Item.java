@@ -4,12 +4,19 @@ package items;
  * Created by jjcomi1989 on 09/10/16.
  */
 
+// This class is an abstract for an input item.
+
 public abstract class Item {
 
+    // Item description
     private String description;
+    // Item price without taxes
     private float price;
+    // Item quantity
     private int quantity;
+    // Bool who stores if imported or not
     private boolean imported;
+    // Bool price + taxes
     private float taxedPrice;
 
     public Item() {
@@ -26,6 +33,8 @@ public abstract class Item {
         this.quantity = quantity;
         this.imported = imported;
     }
+
+    // Getter and setter methods
 
     public void setDescription(String description){
         this.description = description;

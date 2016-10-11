@@ -4,6 +4,8 @@ package tax;
  * Created by jjcomi1989 on 10/10/16.
  */
 
+// This enum defines different kind of policies based on sales taxes problem. More could be addedd.
+
 public enum TaxPolicy implements TaxPolicyInterface {
     BOOK(0.0f),
     FOOD(0.0f),

@@ -27,6 +27,7 @@ public class Receipt implements ReceiptInterface {
         return totalAmount;
     }
 
+    // Print output as requested by the problem
     @Override
     public String toString() {
         String receipt = "";

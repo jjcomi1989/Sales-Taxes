@@ -23,14 +23,18 @@ public class Checkout implements CheckoutInterface {
     }
 
     public void processItemsInCart() {
+        // Process all elements in cart
         for(Item item : itemList) {
+            // Process calculate tax amount and taxed price for each item
             float itemTaxAmount = payment.calculateTax(item.getPrice(), item.getTaxValue(), item.isImported());
             float itemTaxedPrice = payment.calcTotalItemPrice(item.getPrice(), itemTaxAmount);
+            // Store result to object
             item.setTaxedPrice(itemTaxedPrice);
         }
     }
 
     public Receipt getReceipt() {
+        // Create receipt as an instance of receipt class, assign total sales taxes and total amount
         float salesTaxes = payment.calculateSalesTaxes(itemList);
         float totalPayment = payment.calculateTotalPayment(itemList);
         receipt = payment.createReceipt(itemList, salesTaxes, totalPayment);

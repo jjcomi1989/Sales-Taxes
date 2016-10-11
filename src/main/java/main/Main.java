@@ -21,6 +21,7 @@ public class Main {
     public static void main(String [] args) throws IOException {
         List<Item> itemlist = new ArrayList<Item>();
 
+        // Read line by line input and populate ItemList
         File inputFile = new File(args[0]);
         BufferedReader br = new BufferedReader(new FileReader(inputFile));
         String line;
@@ -33,6 +34,7 @@ public class Main {
         }
         br.close();
 
+        // Create an instance of Checkout, process element in cart and finally print a receipt based on input items
         CheckoutInterface checkout = new Checkout(itemlist);
         checkout.processItemsInCart();
         Receipt receipt = checkout.getReceipt();

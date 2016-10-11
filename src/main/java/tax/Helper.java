@@ -9,6 +9,7 @@ import java.util.Locale;
  */
 
 public class Helper {
+    // Helper usefult to decimal to first two decimal digits
     public static float truncate(float value) {
         NumberFormat numberFormat = NumberFormat.getNumberInstance(Locale.US);
         DecimalFormat decimalFormat = (DecimalFormat)numberFormat;
