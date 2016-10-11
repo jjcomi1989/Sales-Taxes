@@ -9,14 +9,18 @@ When I purchase items I receive a receipt which lists the name of all the items 
 The rounding rules for sales tax are that for a tax rate of n%, a shelf price of p contains (np/100 rounded up to the nearest 0.05) amount of sales tax.  
 Write an application that prints out the receipt details for these shopping baskets...  
 
-## Requirements
+## Requirements 
 
 * Maven 
 * Java 1.8+
 * JUnit
 * log4j
 
-## Usage
+## Travis
+
+https://travis-ci.org/jjcomi1989/Sales-Taxes
+
+## Usage and other
 
 `java -jar <name>.jar input.txt`
 
