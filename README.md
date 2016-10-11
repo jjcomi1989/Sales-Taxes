@@ -22,9 +22,10 @@ https://travis-ci.org/jjcomi1989/Sales-Taxes
 
 ## Usage
 
-You can will find 3 input file under resources folder
-
 `java -jar Sales-Taxes.jar input.txt`
+
+Input files are stored under resources folder
+
 
 
 
