@@ -11,3 +11,12 @@ Write an application that prints out the receipt details for these shopping bask
 
 ## Requirements
 
+* Maven 
+* Java 1.8+
+* JUnit
+* log4j
+
+## Usage
+
+`java -jar <name>.jar input.txt`
+
