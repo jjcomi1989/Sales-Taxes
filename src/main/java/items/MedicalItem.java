@@ -1,6 +1,6 @@
 package items;
 
-import tax.TaxPolicy;
+import tax.TaxPolicyInterface;
 
 /**
  * Created by jjcomi1989 on 10/10/16.
@@ -9,18 +9,16 @@ import tax.TaxPolicy;
 //Medical extends Item
 
 public class MedicalItem extends Item {
-
-    public MedicalItem(){
-        super();
-    }
+    private TaxPolicyInterface taxPolicyInterface;
 
     public MedicalItem(String description, float price, int quantity, boolean imported){
         super(description, price, quantity, imported);
+        taxPolicyInterface = new TaxPolicy();
     }
 
     // Tax policy for Medical
     @Override
     public float getTaxValue(){
-        return TaxPolicy.MEDICAL.getItemTax();
+        return taxPolicyInterface.getMedicalTax();
     }
 }

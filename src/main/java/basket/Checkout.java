@@ -1,6 +1,7 @@
 package basket;
 
 import items.Item;
+import items.TaxPolicy;
 import tax.TaxCalculator;
 import tax.TaxCalculatorInterface;
 
@@ -18,7 +19,7 @@ public class Checkout implements CheckoutInterface {
 
     public Checkout(List<Item> itemList){
         this.itemList = itemList;
-        TaxCalculatorInterface taxCalculator = new TaxCalculator();
+        TaxCalculatorInterface taxCalculator = new TaxCalculator(new TaxPolicy());
         payment = new Payment(taxCalculator);
     }
 

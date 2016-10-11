@@ -80,6 +80,12 @@ public abstract class Item {
 
     @Override
     public String toString() {
-        return "Item[quantity=" + getQuantity() + "name=" + getDescription() + ", price=" + getPrice() + ", imported=" + isImported() + "]";
+        return "Item{" +
+                "description='" + description + '\'' +
+                ", price=" + price +
+                ", quantity=" + quantity +
+                ", imported=" + imported +
+                ", taxedPrice=" + taxedPrice +
+                '}';
     }
 }

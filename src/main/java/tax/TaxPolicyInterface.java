@@ -5,5 +5,9 @@ package tax;
  */
 
 public interface TaxPolicyInterface {
-    public float getItemTax();
+    public float getBookTax();
+    public float getFoodTax();
+    public float getMedicalTax();
+    public float getOtherTax();
+    public float getImportedTax();
 }

@@ -1,6 +1,6 @@
 package items;
 
-import tax.TaxPolicy;
+import tax.TaxPolicyInterface;
 
 /**
  * Created by jjcomi1989 on 10/10/16.
@@ -9,18 +9,16 @@ import tax.TaxPolicy;
 // Book extends item
 
 public class BookItem extends Item {
-
-    public BookItem(){
-        super();
-    }
+    private TaxPolicyInterface taxPolicyInterface;
 
     public BookItem(String description, float price, int quantity, boolean imported){
         super(description, price, quantity, imported);
+        taxPolicyInterface = new TaxPolicy();
     }
 
     // Tax policy for Book
     @Override
     public float getTaxValue(){
-        return TaxPolicy.BOOK.getItemTax();
+        return taxPolicyInterface.getBookTax();
     }
 }

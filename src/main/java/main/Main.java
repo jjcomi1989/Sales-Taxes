@@ -26,13 +26,17 @@ public class Main {
         BufferedReader br = new BufferedReader(new FileReader(inputFile));
         String line;
         int index = 0;
-        while ((line = br.readLine()) != null) {
-            InputParser parser = new InputParser();
-            Item item = parser.parser(line);
-            itemlist.add(index, item);
-            index++;
+        try {
+            while ((line = br.readLine()) != null) {
+                Item item = InputParser.parser(line);
+                itemlist.add(index, item);
+                index++;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            br.close();
         }
-        br.close();
 
         // Create an instance of Checkout, process element in cart and finally print a receipt based on input items
         CheckoutInterface checkout = new Checkout(itemlist);
