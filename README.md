@@ -16,11 +16,15 @@ Write an application that prints out the receipt details for these shopping bask
 * JUnit
 * log4j
 
-## Travis
+## Travis CI
 
 https://travis-ci.org/jjcomi1989/Sales-Taxes
 
-## Usage and other
+## Usage
 
-`java -jar <name>.jar input.txt`
+You can will find 3 input file under resources folder
+
+`java -jar Sales-Taxes.jar input.txt`
+
+
 
